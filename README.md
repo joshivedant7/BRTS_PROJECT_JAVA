@@ -33,4 +33,4 @@ The database includes stored procedures for operations like booking tickets, can
 ## Setup Instructions
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/joshivedant7/BRTS_PROJECT_JAVA

@@ -97,16 +97,6 @@ CREATE TABLE `bookinghistory` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `bookinghistory`
---
-
-INSERT INTO `bookinghistory` (`BookingHistoryId`, `UserHistoryId`, `BusId`, `DepartureDate`, `DepartureTime`) VALUES
-(1, 1, 1, '2024-08-09 05:48:56', '18:58:57'),
-(2, 8, 1, '2024-08-10 07:34:11', '10:11:12');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `bus`
 --
 
@@ -123,15 +113,6 @@ CREATE TABLE `bus` (
   `OperatorId` int(20) DEFAULT NULL,
   `TotalSeats` int(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `bus`
---
-
-INSERT INTO `bus` (`BusId`, `BusName`, `BusType`, `DepartureTime`, `TravelTime`, `departureDate`, `DepartureCity`, `ArrivalCity`, `cost`, `OperatorId`, `TotalSeats`) VALUES
-(1, '14D', 'AC', '10:11:12', '07:11:12', '2024-08-09', 'Naroda', 'Sanand', 25, 1, 30);
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `busfrequency`
@@ -158,15 +139,6 @@ CREATE TABLE `busoperator` (
   `PhoneNumber` varchar(20) DEFAULT NULL,
   `Password` varchar(128) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `busoperator`
---
-
-INSERT INTO `busoperator` (`OperatorId`, `OperatorName`, `Address`, `EMail`, `City`, `PhoneNumber`, `Password`) VALUES
-(1, 'Timania Nishan', 'kamathipura, Rajasthan', 'hoeFk@mail', 'jk', '9879879879', '987987');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `operatorhistory`
@@ -200,16 +172,6 @@ CREATE TABLE `payment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `payment`
---
-
-INSERT INTO `payment` (`PaymentId`, `BookingId`, `TotalAmount`, `PaymentDate`, `OperatorId`, `TotalSeats`, `Status`) VALUES
-(1, 1, 25, '2024-08-09 05:45:35', 1, 21, 'PAID'),
-(2, 2, 250, '2024-08-10 07:47:51', 1, 10, 'canceled');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `seatallocation`
 --
 
@@ -237,14 +199,6 @@ CREATE TABLE `user` (
   `Password` varchar(128) DEFAULT NULL,
   `type` varchar(20) NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`UserId`, `FirstName`, `LastName`, `Address`, `City`, `EMail`, `PhoneNumber`, `Password`, `type`) VALUES
-(1, 'vedant', 'joshi', 'iskon', 'abad', '1', '7043792153', '1', 'admin'),
-(8, 'Hakka', 'bakka', 'Jkmn street', 'abad', '2', '9879879879', '123456', 'user');
 
 --
 -- Triggers `user`
